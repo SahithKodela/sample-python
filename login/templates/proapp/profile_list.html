@@ -1,0 +1,48 @@
+{% extends "home.html" %}
+
+{% block content %}
+{% for obj in object_list %}
+
+<center>
+<div class="row">
+        <div>
+            <img src={{obj.image.url}} style="height:200px;
+	        width:auto;
+	        float:left;">
+        </div>
+<table border=0>
+<tr>
+<table border=0>
+    <tr><h2>PERSONAL PROFILE</h2></tr>
+<tr>
+<td>name:</td>
+<td>{{obj.name}}</td>
+</tr>
+<tr>
+<td>date of birth</td>
+<td>{{obj.DateofBirth}}</td>
+</tr>
+<td>Father Name   :  </td>
+<td>{{obj.FatherName}}</td>
+</tr>
+
+<tr>
+<td valigin =top>address:</td>
+<td>{{obj.address}}</td>
+</tr>
+<tr>
+<td>e-mail:</td>
+<td>{{obj.Email}}</td>
+</tr>
+<tr>
+<td>Created Date:</td>
+<td>{{obj.timestamp}}</td>
+</tr>
+
+    </table>
+    </table>
+
+</div>
+    </center>
+    {%endfor%}
+{% endblock %}

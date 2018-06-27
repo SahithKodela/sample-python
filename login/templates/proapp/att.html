@@ -1,0 +1,27 @@
+{% extends "home.html" %}
+
+{% block content %}
+
+
+<center>
+<table border=0>
+<tr>
+<table border=0>
+    <tr><h2>PERSONAL PROFIEL</h2></tr>
+<tr>
+<td>Date:</td>
+<td>Login time: </td>
+<td>Logout time: </td>
+</tr>
+    {% for obj in object_list %}
+    <tr>
+<td>{{obj.date}}:</td>
+<td>{{obj.login}}</td>
+<td>{{obj.logout}}</td>
+</tr>
+    {%endfor%}
+</table>
+</tr>
+</table>
+</center>
+{% endblock content%}
